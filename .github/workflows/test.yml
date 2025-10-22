@@ -16,6 +16,7 @@ jobs:
           print(platform.processor())
         shell: python
   run-windows-commands:
+    needs: ['run-shell-commands']
     runs-on: windows-latest
     steps:
       - name: Directory location with Powershell
