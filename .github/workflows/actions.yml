@@ -1,6 +1,22 @@
 name: Actions workflow
 
-on: [push, pull_request ]
+#on: [push, pull_request ]
+# on:
+#   push:
+#   pull_request:
+#     types: [closed, opened, assigned, reopened]
+on:
+  push:
+    branches:
+      - master
+      - 'feature/*'
+      - 'feature/**'
+      - '!feature/noneed' #it will be ignored
+    tags:
+      - 'v1.*'
+    paths:
+      - '**.js'  
+      - '!filename.js'
 
 jobs:
   run-github-actions:
