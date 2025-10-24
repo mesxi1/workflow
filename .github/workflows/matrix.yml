@@ -1,8 +1,8 @@
 name: Matrix
-on: push
+on: [push]
 jobs:
   node_version:
-    runs-on: ubunty-latest
+    runs-on: ubuntu-latest
     steps:
       - name: log node version
         run: node -v
