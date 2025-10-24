@@ -8,7 +8,7 @@ name: Actions workflow
 on:
   push:
     branches:
-      - master
+      -  master
       - 'feature/*'
       - 'feature/**'
       - '!feature/noneed' #it will be ignored
