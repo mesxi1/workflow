@@ -1,0 +1,13 @@
+name: Matrix
+on: push
+jobs:
+  node_version:
+    runs-on: ubunty-latest
+    steps:
+      - name: log node version
+        run: node -v
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 22
+      - name: Lonode version
+        run: node -v
